@@ -442,22 +442,23 @@ export function getOffset(element) {
   };
 }
 
-const { location } = WINDOW;
-const REGEXP_ORIGINS = /^(https?:)\/\/([^:/?#]+):?(\d*)/i;
+// const { location } = WINDOW;
+// const REGEXP_ORIGINS = /^(https?:)\/\/([^:/?#]+):?(\d*)/i;
 
 /**
  * Check if the given URL is a cross origin URL.
  * @param {string} url - The target URL.
  * @returns {boolean} Returns `true` if the given URL is a cross origin URL, else `false`.
  */
-export function isCrossOriginURL(url) {
-  const parts = url.match(REGEXP_ORIGINS);
+export function isCrossOriginURL() {
+  // const parts = url.match(REGEXP_ORIGINS);
 
-  return parts && (
-    parts[1] !== location.protocol ||
-    parts[2] !== location.hostname ||
-    parts[3] !== location.port
-  );
+  // return parts && (
+  //   parts[1] !== location.protocol ||
+  //   parts[2] !== location.hostname ||
+  //   parts[3] !== location.port
+  // );
+  return false;
 }
 
 /**
